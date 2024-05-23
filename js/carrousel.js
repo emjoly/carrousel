@@ -82,7 +82,7 @@
     });
   
     window.addEventListener('load', function() {
-        updateModalSize(galerie__img[0]);
+        changeImage(0); // Initialize with the first image on load
     });
   
   })();  
