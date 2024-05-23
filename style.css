@@ -1,5 +1,5 @@
 .carrousel {
-  position: absolute;
+  position: sticky;
   transform: scale(0);
   transition: transform 0.25s;
   width: 50%;
@@ -11,6 +11,11 @@
   z-index: 2;
 }
 
+@media screen and (min-width: 768px) {
+  .carrousel {
+    left: 35%;
+  }
+}
 .carrousel__x {
   position: absolute;
   top: 0;
@@ -24,6 +29,28 @@
 
 .carrousel--ouvrir {
   transform: scale(1);
+}
+
+.carrousel__prev,
+.carrousel__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carrousel__prev {
+  left: 10px;
+}
+
+.carrousel__next {
+  right: 10px;
 }
 
 .carrousel__figure {
